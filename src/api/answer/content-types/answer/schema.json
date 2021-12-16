@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answers",
+  "info": {
+    "singularName": "answer",
+    "pluralName": "answers",
+    "displayName": "Answer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "answers"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile.profile",
+      "inversedBy": "answers"
+    },
+    "answer": {
+      "type": "string"
+    }
+  }
+}

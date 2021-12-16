@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "published"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "profilePhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "profile"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "profiles"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "profile"
+    }
+  }
+}

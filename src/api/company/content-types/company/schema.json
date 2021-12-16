@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profile.profile",
+      "mappedBy": "company"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "company"
+    }
+  }
+}
