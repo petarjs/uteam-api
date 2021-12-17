@@ -1864,6 +1864,9 @@
                                                                       }
                                                                     }
                                                                   },
+                                                                  "Slug": {
+                                                                    "type": "string"
+                                                                  },
                                                                   "createdAt": {
                                                                     "type": "string",
                                                                     "format": "date-time"
@@ -4233,6 +4236,9 @@
                                                                       }
                                                                     }
                                                                   }
+                                                                },
+                                                                "Slug": {
+                                                                  "type": "string"
                                                                 },
                                                                 "createdAt": {
                                                                   "type": "string",
@@ -6606,6 +6612,9 @@
                                                                     }
                                                                   }
                                                                 },
+                                                                "Slug": {
+                                                                  "type": "string"
+                                                                },
                                                                 "createdAt": {
                                                                   "type": "string",
                                                                   "format": "date-time"
@@ -8884,6 +8893,9 @@
                                                                       }
                                                                     }
                                                                   }
+                                                                },
+                                                                "Slug": {
+                                                                  "type": "string"
                                                                 },
                                                                 "createdAt": {
                                                                   "type": "string",
